@@ -35,3 +35,10 @@ For the EMA, the seed is the simple mean of the first `period` observations (an 
 
 - `src/moving_average/core.py` — `MovingAverage` (base), `SimpleMovingAverage`, `ExponentialMovingAverage`.
 - `tests/test_core.py` — `python -m unittest discover -s tests` with `PYTHONPATH=src`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+

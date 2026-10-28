@@ -1,6 +1,6 @@
 [project]
 name = "moving-average"
-version = "0.1.1"
+version = "0.1.2"
 description = "Exponential and simple moving averages with warm-up handling."
 requires-python = ">=3.10"
 dependencies = []
